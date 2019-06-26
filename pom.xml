@@ -8,6 +8,18 @@
 	<description>Demo project to secure a JEE 8 on EAP 7.2 application with Red Hat SSO 7.3</description>
 	<packaging>war</packaging>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.keycloak.bom</groupId>
+				<artifactId>keycloak-adapter-bom</artifactId>
+				<version>4.8.3.Final-redhat-00001</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -18,7 +30,6 @@
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-core</artifactId>
-			<version>4.8.3.Final-redhat-00001</version>
 		</dependency>
 	</dependencies>
 
